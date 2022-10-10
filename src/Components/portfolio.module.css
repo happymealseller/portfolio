@@ -11,24 +11,24 @@
 
 .background {
   height: 50vh;
-  width: 99.5vw;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.5vmin 0.5vmin 0 rgba(0, 0, 0, 0.5);
   margin-bottom: 1vmin;
 }
 
 .left,
 .right {
   height: 50vh;
-  width: 99.5vw;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 0.5vmin 2vmin 0.5vmin;
-  animation: 2.5s ease-out 0s 1 slide;
+  animation: 3.4s linear slide;
   overflow: hidden;
   position: relative;
 }
@@ -57,7 +57,8 @@
   font-size: 1.8vmin;
   text-align: center;
   opacity: 1;
-  transition: all linear 1s;
+  /* transition: all linear 1s;
+  margin: 0; */
 }
 
 .left:hover::after,
@@ -85,7 +86,7 @@
 @media (max-width: 1024px) {
   .background {
     height: 50vh;
-    width: 99.5vw;
+    width: 100vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -96,18 +97,17 @@
 
   .left,
   .right {
-    margin: 0;
-    margin-bottom: 1vmin;
+    margin: 0 0 1vmin 0;
   }
 
   .left::after,
   .right::after {
     height: 25vh;
-    margin: 0 0.5vmin 2vmin 0.5vmin;
+    margin: 0;
   }
 
   .img {
     height: 145%;
-    width: 99.5vw;
+    width: 100vw;
   }
 }

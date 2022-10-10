@@ -9,6 +9,19 @@
       html {
         scroll-behavior: smooth;
       }
+      html::-webkit-scrollbar {
+        height: 0%;
+        width: 100%;
+      }
+
+      html::-webkit-scrollbar-track,
+      html::-webkit-scrollbar-thumb {
+        background: none;
+      }
+
+      html::-webkit-scrollbar-thumb:hover {
+        background: rgba(128, 128, 128, 0.1);
+      }
     </style>
     <meta
       name="description"

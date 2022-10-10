@@ -16,6 +16,7 @@ const Carousel = function(props) {
     <div className={styles.right}>
       {displayRecords}
       {displayRecords}
+      {displayRecords}
     </div> 
 
    </div>

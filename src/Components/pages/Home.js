@@ -10,8 +10,7 @@ import {academicRecords, skillRecords, textRecords} from '../../database'
 
 const Home = function() {  
   return (
-    <React.Fragment>   
-      <div id="top"/>        
+    <React.Fragment>       
       <Splash >
         <Navbar/>
       </Splash>  
