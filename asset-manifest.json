@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-first-site/static/css/main.37b4895a.css",
+    "main.js": "/react-first-site/static/js/main.5b7e96e9.js",
+    "static/media/splash-bg.jpeg": "/react-first-site/static/media/splash-bg.8498d5d894f2163a0830.jpeg",
+    "static/media/splash-logo.png": "/react-first-site/static/media/splash-logo.68a1ce391cf94c6b6cc1.png",
+    "index.html": "/react-first-site/index.html",
+    "main.37b4895a.css.map": "/react-first-site/static/css/main.37b4895a.css.map",
+    "main.5b7e96e9.js.map": "/react-first-site/static/js/main.5b7e96e9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37b4895a.css",
+    "static/js/main.5b7e96e9.js"
+  ]
+}
