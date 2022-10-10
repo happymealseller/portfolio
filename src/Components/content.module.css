@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap");
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.background {
+  height: 35vh;
+  width: 99.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 245, 245);
+  animation: 3s ease-out 0s 1 slide;
+  box-shadow: inset 0px 11px 8px -10px #ccc, inset 0px -11px 8px -10px #ccc;
+  margin-bottom: 1vmin;
+}
+
+.left {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 11px 8px -10px #ccc, inset 0px -11px 8px -10px #ccc;
+  background: linear-gradient(
+    15deg,
+    rgba(241, 203, 220, 1) 0%,
+    rgba(219, 214, 229, 1) 42%,
+    rgba(190, 229, 240, 0.9) 100%
+  );
+  position: relative;
+  z-index: 1;
+  transition: background 5s linear;
+}
+
+.left::before {
+  background: linear-gradient(
+    15deg,
+    rgba(190, 229, 240, 0.9) 0%,
+    rgba(219, 214, 229, 1) 42%,
+    rgba(241, 203, 220, 1) 100%
+  );
+  content: "";
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  transition: opacity 0.5s linear;
+}
+
+.left:hover::before {
+  opacity: 1;
+}
+
+.photo {
+  width: 75%;
+  height: 75%;
+  box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  transition: all 2s ease-in-out;
+}
+
+.photo:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.right {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.6vmin;
+  white-space: pre-wrap;
+}
+
+.text {
+  margin: 5vmin;
+  width: 80%;
+}
+
+.next {
+  border: none;
+  height: 35vh;
+  width: 10%;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 2vmin;
+  text-shadow: rgb(175, 175, 175) 0.1vmin 0.2vmin 0.2vmin;
+  transition: all 0.5s linear;
+}
+
+.next:hover {
+  border: none;
+  cursor: pointer;
+  transform: rotate(118deg);
+  color: rgb(214, 204, 194);
+}
+
+@media (max-width: 1024px) {
+  .background {
+    height: 20vh;
+    width: 99.5vw;
+  }
+
+  .right {
+    font-size: 1.4vmin;
+  }
+
+  .text {
+    margin: 4vmin;
+    margin-right: 3vmin;
+    width: 80%;
+  }
+}

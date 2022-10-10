@@ -1,0 +1,57 @@
+.background {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain {
+  margin-top: 1vmin;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left img {
+  height: 5vmin;
+  width: 5vmin;
+  border-radius: 0.25vmin;
+  background-size: cover;
+  background-position: 50%;
+  margin: -0.5vmin 1vmin 1vmin 1vmin;
+}
+
+.right {
+  height: 14vh;
+  width: 12vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  color: white;
+}
+
+.right p {
+  margin-top: -0.8vmin;
+  color: white;
+  font-family: "Major Mono Display", monospace;
+  font-size: 1vmin;
+  text-shadow: rgb(255, 255, 255) 0 0 0.4vmin;
+}
+
+@media (max-width: 1024px) {
+  .right {
+    height: 14vh;
+    width: 18vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    color: white;
+  }
+}

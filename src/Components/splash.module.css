@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Major+Mono+Display&display=swap");
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(1.5%);
+  }
+  25% {
+    transform: translateY(152%);
+  }
+  50% {
+    transform: translateY(1.5%);
+  }
+  75% {
+    transform: translateY(152%);
+  }
+  100% {
+    transform: translateY(1.5%);
+  }
+}
+
+.background {
+  height: 100vh;
+  width: 99.5vw;
+  background-image: url("../../public/img/splash-bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  animation: fade 4s;
+  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1vmin;
+  overflow: hidden;
+}
+
+.logo {
+  height: 100vh;
+  background-image: url("../../public/img/splash-logo.png");
+  background-size: 24.5vmin 10vmin;
+  background-repeat: no-repeat;
+  background-position: 50% 44%;
+  opacity: 0.2;
+  transition: opacity 1s;
+  animation: fade 2s;
+}
+
+.logo:hover {
+  opacity: 0.7;
+  transition: opacity 1s;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  height: 95vh;
+  width: 65vw;
+  display: flex;
+  align-items: flex-end;
+}
+
+.right {
+  height: 25vh;
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  animation: bounce 60s linear infinite;
+}
+
+.summary {
+  padding: 0 0 2vmin 7vmin;
+  font-family: "Major Mono Display", monospace;
+  text-shadow: rgb(255, 255, 255) 0.1vmin 0 0.4vmin;
+  font-size: 1.2vmin;
+  color: white;
+}
+
+.icon {
+  height: 5vmin;
+  width: 5vmin;
+  padding: 1vmin;
+  margin: 2vmin;
+  border-radius: 0.5vmin;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 1024px) {
+  @keyframes bounce {
+    0% {
+      transform: translateY(1.5%);
+    }
+    25% {
+      transform: translateY(200%);
+    }
+    50% {
+      transform: translateY(1.5%);
+    }
+    75% {
+      transform: translateY(200%);
+    }
+    100% {
+      transform: translateY(1.5%);
+    }
+  }
+
+  .background {
+    width: 99.5vw;
+  }
+
+  .summary {
+    padding: 0 0 9vmin 6vmin;
+    font-family: "Major Mono Display", monospace;
+    text-shadow: rgb(255, 255, 255) 0.1vmin 0 0.4vmin;
+    font-size: 1.6vmin;
+    color: white;
+  }
+
+  .icon {
+    height: 7vmin;
+    width: 7vmin;
+    padding: 2vmin;
+    margin: 2vmin;
+    border-radius: 0.5vmin;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}

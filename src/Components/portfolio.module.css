@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Major+Mono+Display&display=swap");
+
+@keyframes slide {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.background {
+  height: 50vh;
+  width: 99.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1vmin;
+}
+
+.left,
+.right {
+  height: 50vh;
+  width: 99.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.5vmin 2vmin 0.5vmin;
+  animation: 2.5s ease-out 0s 1 slide;
+  overflow: hidden;
+  position: relative;
+}
+
+.left::after,
+.right::after {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    circle,
+    rgba(30, 25, 25, 0.4) 0%,
+    rgba(0, 0, 0, 0.75) 95%
+  );
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "click to experience projects on github";
+  color: white;
+  text-shadow: rgb(255, 255, 255) 0.1vmin 0 1vmin;
+  font-family: "Major Mono Display", monospace;
+  font-size: 1.8vmin;
+  text-align: center;
+  opacity: 1;
+  transition: all linear 1s;
+}
+
+.left:hover::after,
+.right:hover::after {
+  cursor: pointer;
+  background: radial-gradient(
+    circle,
+    rgba(30, 25, 25, 0.4) 0%,
+    rgba(0, 0, 0, 0.75) 95%
+  );
+  font-size: 2vmin;
+  opacity: 0;
+  transition: all linear 5s;
+}
+
+.img {
+  height: 50vh;
+  width: 55vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .background {
+    height: 50vh;
+    width: 99.5vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: none;
+    margin-bottom: 0;
+  }
+
+  .left,
+  .right {
+    margin: 0;
+    margin-bottom: 1vmin;
+  }
+
+  .left::after,
+  .right::after {
+    height: 25vh;
+    margin: 0 0.5vmin 2vmin 0.5vmin;
+  }
+
+  .img {
+    height: 145%;
+    width: 99.5vw;
+  }
+}
