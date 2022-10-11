@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-first-site/static/css/main.49ee7727.css",
-    "main.js": "/react-first-site/static/js/main.cc18461e.js",
+    "main.css": "/react-first-site/static/css/main.e041d8b1.css",
+    "main.js": "/react-first-site/static/js/main.a95c0563.js",
     "static/media/splash-bg.jpeg": "/react-first-site/static/media/splash-bg.8498d5d894f2163a0830.jpeg",
     "static/media/splash-logo.png": "/react-first-site/static/media/splash-logo.68a1ce391cf94c6b6cc1.png",
     "index.html": "/react-first-site/index.html",
-    "main.49ee7727.css.map": "/react-first-site/static/css/main.49ee7727.css.map",
-    "main.cc18461e.js.map": "/react-first-site/static/js/main.cc18461e.js.map"
+    "main.e041d8b1.css.map": "/react-first-site/static/css/main.e041d8b1.css.map",
+    "main.a95c0563.js.map": "/react-first-site/static/js/main.a95c0563.js.map"
   },
   "entrypoints": [
-    "static/css/main.49ee7727.css",
-    "static/js/main.cc18461e.js"
+    "static/css/main.e041d8b1.css",
+    "static/js/main.a95c0563.js"
   ]
 }
