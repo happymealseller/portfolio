@@ -29,7 +29,7 @@ const Page = function(props) {
 
     <div className={styles.right}>  
       <p className={styles.text}>{story}</p>
-      <button className={styles.next} onClick={handleClick}>▶</button> 
+      <button className={styles.next} onClick={handleClick}>►</button> 
     </div>  
    </div>
   </React.Fragment>)  
