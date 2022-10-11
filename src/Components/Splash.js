@@ -7,24 +7,37 @@ const Splash = function(props) {
   const faIcons = [faHtml5, faCss3, faJs, faReact, faNodeJs]
   const displayFaIcons = faIcons.map ((icon, index) => <FontAwesomeIcon className={styles.icon} key={index} icon={icon} />)
 
-  return (<React.Fragment>     
-   <div className={styles.background}>
-    <div className={styles.logo}>      
-      {props.children}
-      <div className={styles.content}>
-        <div className={styles.left}>
-          <h3 className={styles.summary}>  
-            design and development skills, able to execute projects from wireframe to production.<br/>
-            marketing background, understands the importance of ui/ux and how it influences human psychology.<br/>
-            self-starter with an initiative to learn, keen eye for detail.<br/>
-          </h3>      
-        </div>        
-        <div className={styles.right}>
-          {displayFaIcons}
-        </div>      
-      </div>
+  if (document.readyState === "complete") {
+    setTimeout(()=>{document.querySelector(`.${styles.loaderbg}`).style.display = "none";}, "2000")
+    setTimeout(()=>{document.querySelector(`.${styles.background}`).style.display = "block";}, "2000")
+  } else {
+    window.addEventListener('load', () => {
+      setTimeout(()=>{document.querySelector(`.${styles.loaderbg}`).style.display = "none";}, "2000")
+      setTimeout(()=>{document.querySelector(`.${styles.background}`).style.display = "block";}, "2000")
+  });
+  }
+  
+  return (<React.Fragment>   
+    <div className={styles.loaderbg}>   
+      <div className={styles.loader}></div>  
     </div>
-   </div>   
+    <div className={styles.background}>      
+      <div className={styles.logo}>      
+        {props.children}
+        <div className={styles.content}>
+          <div className={styles.left}>
+            <h3 className={styles.summary}>  
+              design and development skills, able to execute projects from wireframe to production.<br/>
+              marketing background, understands the importance of ui/ux and how it influences human psychology.<br/>
+              self-starter with an initiative to learn, keen eye for detail.<br/>
+            </h3>      
+          </div>        
+          <div className={styles.right}>
+            {displayFaIcons}
+          </div>      
+        </div>
+      </div>     
+    </div>       
   </React.Fragment>)  
 }
 
